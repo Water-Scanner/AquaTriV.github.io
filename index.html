@@ -6,7 +6,7 @@
 
 <title>AquaTriV Dataset</title>
 
-<!-- Font -->
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans" rel="stylesheet">
 
 <!-- Bulma -->
@@ -17,8 +17,11 @@
 
 <style>
 
-/* ===== Global ===== */
-body { font-family: 'Noto Sans', sans-serif; margin:0; }
+/* ================= GLOBAL ================= */
+body {
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+}
 
 .section {
   padding-top: 3rem;
@@ -35,7 +38,12 @@ body { font-family: 'Noto Sans', sans-serif; margin:0; }
   -webkit-text-fill-color: transparent;
 }
 
-/* ===== HERO VIDEO ===== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ================= HERO VIDEO ================= */
 .hero-video {
   position: relative;
   height: 100vh;
@@ -103,7 +111,7 @@ body { font-family: 'Noto Sans', sans-serif; margin:0; }
   to { opacity:1; transform: translateY(0);}
 }
 
-/* ===== Buttons ===== */
+/* ================= BUTTON ================= */
 .publication-links .button {
   margin: 5px;
   transition: 0.25s;
@@ -113,25 +121,24 @@ body { font-family: 'Noto Sans', sans-serif; margin:0; }
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
-/* ===== Logos ===== */
+/* ================= LOGO ================= */
 .affiliation-logos {
   text-align:center;
   margin-top:20px;
 }
+
 .affiliation-logos img {
-  height:55px;
+  height: 55px;
   margin: 0 12px;
   vertical-align: middle;
-  filter: grayscale(100%);
-  opacity: 0.85;
   transition: 0.3s;
 }
+
 .affiliation-logos img:hover {
-  filter: grayscale(0%);
-  opacity: 1;
+  transform: scale(1.05);
 }
 
-/* ===== Cards ===== */
+/* ================= CARD ================= */
 .card-hover:hover {
   transform: translateY(-5px);
   transition: 0.3s;
@@ -147,7 +154,7 @@ body { font-family: 'Noto Sans', sans-serif; margin:0; }
 
 <body>
 
-<!-- ================= HERO VIDEO ================= -->
+<!-- ================= HERO ================= -->
 <section class="hero-video">
 
   <video autoplay muted loop playsinline class="bg-video">
@@ -176,8 +183,7 @@ body { font-family: 'Noto Sans', sans-serif; margin:0; }
   <div class="scroll-down">↓</div>
 </section>
 
-
-<!-- ================= TITLE & AUTHORS ================= -->
+<!-- ================= TITLE ================= -->
 <section class="section">
 <div class="container is-max-desktop has-text-centered">
 
@@ -229,7 +235,6 @@ Bin Wang<sup>3</sup>, Yuanbo Xue<sup>4</sup>, Long Cheng<sup>1</sup>
 </div>
 </section>
 
-
 <!-- ================= OVERVIEW ================= -->
 <section class="section section-dark">
 <div class="container is-max-desktop">
@@ -261,7 +266,6 @@ Bin Wang<sup>3</sup>, Yuanbo Xue<sup>4</sup>, Long Cheng<sup>1</sup>
 
 </div>
 </section>
-
 
 <!-- ================= SCENES ================= -->
 <section class="section">
@@ -316,7 +320,6 @@ Bin Wang<sup>3</sup>, Yuanbo Xue<sup>4</sup>, Long Cheng<sup>1</sup>
 </div>
 </section>
 
-
 <!-- ================= BENCHMARK ================= -->
 <section class="section section-dark">
 <div class="container is-max-desktop">
@@ -332,8 +335,7 @@ Evaluation across SOTA SLAM systems under challenging underwater conditions.
 </div>
 </section>
 
-
-<!-- ================= GALLERY ================= -->
+<!-- ================= VISUAL ================= -->
 <section class="section">
 <div class="container is-max-desktop">
 
@@ -350,7 +352,6 @@ Evaluation across SOTA SLAM systems under challenging underwater conditions.
 
 </div>
 </section>
-
 
 <!-- ================= BIBTEX ================= -->
 <section class="section section-dark">
@@ -369,7 +370,6 @@ year={2025}
 
 </div>
 </section>
-
 
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
