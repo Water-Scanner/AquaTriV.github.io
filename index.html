@@ -4,16 +4,36 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<title>AquaTriV Dataset</title>
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans" rel="stylesheet">
+
+<!-- Bulma -->
+<link rel="stylesheet" href="static/css/bulma.min.css">
+
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-<title>AquaTriV Dataset</title>
-
-<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans" rel="stylesheet">
-<link rel="stylesheet" href="static/css/bulma.min.css">
-
 <style>
+
+/* ===== Global ===== */
 body { font-family: 'Noto Sans', sans-serif; margin:0; }
+
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.section-dark {
+  background-color: #f5f7fa;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 /* ===== HERO VIDEO ===== */
 .hero-video {
@@ -63,7 +83,6 @@ body { font-family: 'Noto Sans', sans-serif; margin:0; }
   margin: 5px;
 }
 
-/* scroll hint */
 .scroll-down {
   position: absolute;
   bottom: 20px;
@@ -84,20 +103,38 @@ body { font-family: 'Noto Sans', sans-serif; margin:0; }
   to { opacity:1; transform: translateY(0);}
 }
 
-/* ===== NORMAL CONTENT ===== */
-.gradient-text {
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* ===== Buttons ===== */
+.publication-links .button {
+  margin: 5px;
+  transition: 0.25s;
+}
+.publication-links .button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
+/* ===== Logos ===== */
+.affiliation-logos {
+  text-align:center;
+  margin-top:20px;
+}
+.affiliation-logos img {
+  height:55px;
+  margin: 0 12px;
+  vertical-align: middle;
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition: 0.3s;
+}
+.affiliation-logos img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* ===== Cards ===== */
 .card-hover:hover {
   transform: translateY(-5px);
   transition: 0.3s;
-}
-
-.section-dark {
-  background-color: #f5f7fa;
 }
 
 .video-container {
@@ -105,32 +142,12 @@ body { font-family: 'Noto Sans', sans-serif; margin:0; }
   overflow: hidden;
 }
 
-.publication-links .button {
-  margin: 5px;
-  transition: 0.25s;
-}
-
-.publication-links .button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* logo hover */
-.affiliation-logos img {
-  filter: grayscale(100%);
-  opacity: 0.8;
-  transition: 0.3s;
-}
-.affiliation-logos img:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-}
 </style>
 </head>
 
 <body>
 
-<!-- ========== HERO VIDEO ========== -->
+<!-- ================= HERO VIDEO ================= -->
 <section class="hero-video">
 
   <video autoplay muted loop playsinline class="bg-video">
@@ -144,27 +161,25 @@ body { font-family: 'Noto Sans', sans-serif; margin:0; }
     <h2>A Multi-Modal Underwater Dataset for Dense SLAM</h2>
 
     <div class="hero-buttons">
-      <a href="#" class="button is-dark is-rounded">
+      <a href="https://arxiv.org/pdf/XXXX.pdf" target="_blank" class="button is-dark is-rounded">
         <i class="fas fa-file-pdf"></i>&nbsp; Paper
       </a>
-      <a href="#" class="button is-dark is-rounded">
+      <a href="https://github.com/yourrepo" target="_blank" class="button is-dark is-rounded">
         <i class="fab fa-github"></i>&nbsp; Code
       </a>
-      <a href="#" class="button is-success is-rounded">
+      <a href="#" target="_blank" class="button is-success is-rounded">
         <i class="fas fa-database"></i>&nbsp; Dataset
       </a>
     </div>
   </div>
 
   <div class="scroll-down">↓</div>
-
 </section>
 
 
-<!-- ========== 原来的内容（往下滑才看到） ========== -->
-
+<!-- ================= TITLE & AUTHORS ================= -->
 <section class="section">
-<div class="container has-text-centered">
+<div class="container is-max-desktop has-text-centered">
 
 <h1 class="title is-1 gradient-text">AquaTriV</h1>
 
@@ -175,14 +190,14 @@ A Unified Multi-Modal Underwater Dataset for Dense SLAM and Neural Reconstructio
 <p><b>25 sequences · 255GB · 6.9h · 2.8km trajectory</b></p>
 
 <!-- Authors -->
-<div class="is-size-5 publication-authors">
+<div class="is-size-5">
 Yaming Ou<sup>1,2</sup>, Xiaoyan Liu<sup>1,2</sup>, Junfeng Fan<sup>2</sup>,
 Chao Zhou<sup>2</sup>, Pengjv Zhang<sup>2</sup>, Song Xia<sup>2</sup>,
 Bin Wang<sup>3</sup>, Yuanbo Xue<sup>4</sup>, Long Cheng<sup>1</sup>
 </div>
 
 <!-- Affiliations -->
-<div class="is-size-6" style="margin-top: 10px;">
+<div class="is-size-6" style="margin-top:10px;">
 <sup>1</sup> UCAS &nbsp;
 <sup>2</sup> CASIA &nbsp;
 <sup>3</sup> PolyU &nbsp;
@@ -190,19 +205,32 @@ Bin Wang<sup>3</sup>, Yuanbo Xue<sup>4</sup>, Long Cheng<sup>1</sup>
 </div>
 
 <!-- Logos -->
-<div class="columns is-centered affiliation-logos" style="margin-top:20px;">
-<img src="static/logo/UCAS.jpeg" height="60">
-<img src="static/logo/CASIA.jpeg" height="60">
-<img src="static/logo/HKU.jpeg" height="60">
-<img src="static/logo/PolyU.jpeg" height="60">
-<img src="static/logo/UCL.jpeg" height="60">
+<div class="affiliation-logos">
+  <img src="static/logo/UCAS.jpeg">
+  <img src="static/logo/CASIA.jpeg">
+  <img src="static/logo/HKU.jpeg">
+  <img src="static/logo/PolyU.jpeg">
+  <img src="static/logo/UCL.jpeg">
+</div>
+
+<!-- Buttons -->
+<div class="publication-links" style="margin-top:20px;">
+  <a href="https://arxiv.org/pdf/XXXX.pdf" target="_blank" class="button is-dark is-rounded">
+    <i class="fas fa-file-pdf"></i>&nbsp; Paper
+  </a>
+  <a href="https://github.com/yourrepo" target="_blank" class="button is-dark is-rounded">
+    <i class="fab fa-github"></i>&nbsp; Code
+  </a>
+  <a href="#" target="_blank" class="button is-success is-rounded">
+    <i class="fas fa-database"></i>&nbsp; Dataset (255GB)
+  </a>
 </div>
 
 </div>
 </section>
 
 
-<!-- OVERVIEW -->
+<!-- ================= OVERVIEW ================= -->
 <section class="section section-dark">
 <div class="container is-max-desktop">
 
@@ -212,27 +240,143 @@ Bin Wang<sup>3</sup>, Yuanbo Xue<sup>4</sup>, Long Cheng<sup>1</sup>
 <div class="column">
 <div class="box card-hover">
 <h4 class="title is-5">Multi-Modal Sensing</h4>
-<p>Passive, active, neuromorphic vision + IMU, DVL</p>
+<p>Passive, active, neuromorphic vision + IMU, DVL, pressure</p>
 </div>
 </div>
 
 <div class="column">
 <div class="box card-hover">
 <h4 class="title is-5">Dense Ground Truth</h4>
-<p>Laser-scanned dense maps</p>
+<p>Laser-scanned dense point clouds for mapping evaluation</p>
 </div>
 </div>
 
 <div class="column">
 <div class="box card-hover">
 <h4 class="title is-5">Accurate Localization</h4>
-<p>MCS + INS-SfM</p>
+<p>MCS (indoor) + INS-SfM fusion (outdoor)</p>
 </div>
 </div>
 </div>
 
 </div>
 </section>
+
+
+<!-- ================= SCENES ================= -->
+<section class="section">
+<div class="container is-max-desktop">
+
+<h2 class="title is-3">Scenes & Downloads</h2>
+
+<div class="columns is-multiline">
+
+<div class="column is-3">
+<div class="card card-hover">
+<img src="static/images/pool.jpg">
+<div class="card-content">
+<b>Pool</b><br>~100GB<br>
+<a class="button is-link is-light">Download</a>
+</div>
+</div>
+</div>
+
+<div class="column is-3">
+<div class="card card-hover">
+<img src="static/images/cave.jpg">
+<div class="card-content">
+<b>Cave</b><br>~50GB<br>
+<a class="button is-link is-light">Download</a>
+</div>
+</div>
+</div>
+
+<div class="column is-3">
+<div class="card card-hover">
+<img src="static/images/river.jpg">
+<div class="card-content">
+<b>River</b><br>~60GB<br>
+<a class="button is-link is-light">Download</a>
+</div>
+</div>
+</div>
+
+<div class="column is-3">
+<div class="card card-hover">
+<img src="static/images/sea.jpg">
+<div class="card-content">
+<b>Sea</b><br>~45GB<br>
+<a class="button is-link is-light">Download</a>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= BENCHMARK ================= -->
+<section class="section section-dark">
+<div class="container is-max-desktop">
+
+<h2 class="title is-3">Benchmark</h2>
+
+<img src="static/images/benchmark.png">
+
+<p>
+Evaluation across SOTA SLAM systems under challenging underwater conditions.
+</p>
+
+</div>
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+<section class="section">
+<div class="container is-max-desktop">
+
+<h2 class="title is-3">Visualization</h2>
+
+<div class="columns">
+<div class="column">
+<img src="static/images/gt_map.png">
+</div>
+<div class="column">
+<img src="static/images/trajectory.png">
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= BIBTEX ================= -->
+<section class="section section-dark">
+<div class="container is-max-desktop">
+
+<h2 class="title is-3">BibTeX</h2>
+
+<pre>
+@article{aquatriv2025,
+title={AquaTriV Dataset},
+author={Ou et al.},
+journal={IJRR},
+year={2025}
+}
+</pre>
+
+</div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+<div class="content has-text-centered">
+<p>AquaTriV Dataset © 2025</p>
+</div>
+</footer>
 
 </body>
 </html>
