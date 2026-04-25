@@ -220,87 +220,117 @@ Water-Scanner: Custom-designed underwater robotic platform equipped with multi-m
 </div>
 </section>
 
-<!-- ================= SENSOR SPECS ================= -->
-<section class="section">
+<!-- ================= SENSOR LAYOUT ADVANCED ================= -->
+<section class="section" style="padding-top:10px;">
 <div class="container is-max-desktop">
 
-<h2 class="title is-3">System Specifications</h2>
+<div class="columns">
 
-<div class="columns is-multiline">
+<!-- LEFT: ROBOT (BIG CARD) -->
+<div class="column is-5">
+<div class="box card-hover" style="height:100%;">
 
-<!-- Robot -->
-<div class="column is-4">
-<div class="box card-hover">
 <h4 class="title is-5">Robot Platform</h4>
+
 <p><b>Model:</b> FindROV H20</p>
 <p><b>Size:</b> 0.56 × 0.47 × 0.28 m</p>
 <p><b>Weight:</b> 23 kg</p>
-<p><b>Depth:</b> 300 m</p>
+<p><b>Max Depth:</b> 300 m</p>
 <p><b>Velocity:</b> 2 knot</p>
+<p><b>Cable:</b> 100 m</p>
+
 </div>
 </div>
 
+<!-- RIGHT: SENSOR GRID -->
+<div class="column is-7">
+
+<div class="columns is-multiline">
+
 <!-- AHRS -->
-<div class="column is-4">
+<div class="column is-6">
 <div class="box card-hover">
-<h4 class="title is-5">AHRS</h4>
+<h4 class="title is-6">AHRS</h4>
 <p><b>Model:</b> 3DM-CV5-25</p>
 <p><b>Freq:</b> 100 Hz</p>
-<p><b>Roll/Pitch:</b> ±0.5°</p>
-<p><b>Heading:</b> ±1°</p>
+<p><b>R/P:</b> ±0.5°</p>
+<p><b>Yaw:</b> ±1°</p>
+<p><b>Mag:</b> ±2.5 Gauss</p>
 </div>
 </div>
 
 <!-- DVL -->
-<div class="column is-4">
+<div class="column is-6">
 <div class="box card-hover">
-<h4 class="title is-5">DVL</h4>
+<h4 class="title is-6">DVL</h4>
 <p><b>Model:</b> A50</p>
-<p><b>Beam:</b> 4-beam Janus</p>
+<p><b>Beam:</b> 4-beam</p>
 <p><b>Angle:</b> 22.5°</p>
 <p><b>Freq:</b> 4–26 Hz</p>
+<p><b>Res:</b> 0.1 mm/s</p>
 </div>
 </div>
 
 <!-- Pressure -->
-<div class="column is-4">
+<div class="column is-6">
 <div class="box card-hover">
-<h4 class="title is-5">Pressure Sensor</h4>
+<h4 class="title is-6">Pressure</h4>
+<p><b>Model:</b> B30</p>
 <p><b>Range:</b> 0–30 bar</p>
 <p><b>Depth:</b> 300 m</p>
-<p><b>Accuracy:</b> ±200 mbar</p>
+<p><b>Acc:</b> ±200 mbar</p>
+<p><b>Res:</b> 0.2 mbar</p>
 </div>
 </div>
 
-<!-- Cameras -->
-<div class="column is-4">
+<!-- Mono -->
+<div class="column is-6">
 <div class="box card-hover">
-<h4 class="title is-5">Cameras</h4>
-<p><b>Mono:</b> 1920×1080 @30Hz</p>
-<p><b>Stereo:</b> D435i</p>
-<p><b>FoV:</b> 80° × 64°</p>
+<h4 class="title is-6">Mono Camera</h4>
+<p><b>View:</b> Front</p>
+<p><b>RGB</b></p>
+<p><b>Res:</b> 1920×1080</p>
+<p><b>Freq:</b> 30 Hz</p>
+<p><b>FoV:</b> 80°×64°</p>
+</div>
+</div>
+
+<!-- Stereo -->
+<div class="column is-6">
+<div class="box card-hover">
+<h4 class="title is-6">Stereo</h4>
+<p><b>View:</b> Down</p>
+<p><b>D435i</b></p>
+<p><b>Res:</b> 640×480</p>
+<p><b>Freq:</b> 30 Hz</p>
+<p><b>FoV:</b> 87°×58°</p>
 </div>
 </div>
 
 <!-- Event -->
-<div class="column is-4">
+<div class="column is-6">
 <div class="box card-hover">
-<h4 class="title is-5">Event Camera</h4>
-<p><b>Model:</b> DAVIS346</p>
+<h4 class="title is-6">Event Cam</h4>
+<p><b>DAVIS346</b></p>
 <p><b>Res:</b> 346×260</p>
-<p><b>Latency:</b> 1μs</p>
+<p><b>Time:</b> 1 μs</p>
 <p><b>DR:</b> 120 dB</p>
+<p>&nbsp;</p>
 </div>
 </div>
 
 <!-- Laser -->
-<div class="column is-4">
+<div class="column is-6">
 <div class="box card-hover">
-<h4 class="title is-5">3D Laser</h4>
+<h4 class="title is-6">3D Laser</h4>
 <p><b>Freq:</b> 70 Hz</p>
 <p><b>Points:</b> 512</p>
-<p><b>Wavelength:</b> 450 nm</p>
+<p><b>λ:</b> 450 nm</p>
+<p><b>Power:</b> 3 W</p>
 <p><b>Angle:</b> 35°</p>
+</div>
+</div>
+
 </div>
 </div>
 
