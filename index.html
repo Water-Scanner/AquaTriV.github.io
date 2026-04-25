@@ -447,13 +447,72 @@ We provide multi-modal raw sensory data including active vision, passive vision,
 
 
   
-<!-- BENCHMARK -->
-<section class="section">
+<!-- ================= BENCHMARK ================= -->
+<section class="section section-dark">
 <div class="container is-max-desktop">
 
-<h2 class="title is-3">Benchmark</h2>
+<h2 class="title is-3">Benchmark Evaluation</h2>
 
-<img src="static/images/benchmark.png">
+<!-- ========== Localization ========== -->
+<h3 class="title is-4">Localization Evaluation</h3>
+
+<p>
+We evaluate classical and multi-modal visual-inertial SLAM systems including 
+<b>VINS-Fusion</b>, <b>SVIn2</b>, <b>VD-Fusion</b>, and <b>AquaSLAM</b>. 
+These methods represent state-of-the-art pipelines combining stereo vision, IMU, DVL, and event cameras.
+</p>
+
+<div style="overflow-x:auto; margin-top:15px;">
+<img src="static/images/table_localization.png" style="min-width:900px;">
+</div>
+
+<p style="margin-top:10px;">
+Metrics include APE, ARE, RPE, RRE for accuracy, and CRS/TCR for robustness and tracking continuity.
+</p>
+
+
+<!-- ========== Mapping ========== -->
+<h3 class="title is-4" style="margin-top:40px;">Dense Mapping Evaluation</h3>
+
+<p>
+We compare representative dense mapping and neural reconstruction baselines, including 
+<b>DR-Scan</b>, <b>DR-Sweep</b>, <b>DROID-SLAM</b>, and <b>MASt3R-SLAM</b>, 
+covering both geometric and learning-based approaches.
+</p>
+
+<div style="overflow-x:auto; margin-top:15px;">
+<img src="static/images/table_mapping.png" style="min-width:900px;">
+</div>
+
+<p style="margin-top:10px;">
+Evaluation metrics include nearest neighbor error (NNE), completeness (COM), accuracy (AC), 
+Chamfer distance (CD), and mesh metric error (MME).
+</p>
+
+
+<!-- ========== Neural Reconstruction ========== -->
+<h3 class="title is-4" style="margin-top:40px;">Neural Reconstruction</h3>
+
+<p>
+We further evaluate neural rendering quality using modern radiance field methods 
+(e.g., Gaussian Splatting / NeRF variants), demonstrating robustness under turbidity, 
+low visibility, and dynamic lighting conditions.
+</p>
+
+<!-- Main Image -->
+<div class="has-text-centered" style="margin-top:20px;">
+<img src="static/images/nerf_result.png" style="max-width:90%;">
+</div>
+
+<!-- GIFs -->
+<div class="columns" style="margin-top:20px;">
+<div class="column">
+<img src="static/gif/recon1.gif">
+</div>
+<div class="column">
+<img src="static/gif/recon2.gif">
+</div>
+</div>
 
 </div>
 </section>
