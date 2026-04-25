@@ -377,6 +377,76 @@ Sea<br>~45GB
 </div>
 </section>
 
+
+<!-- ================= DATA VISUALIZATION ================= -->
+<section class="section section-dark">
+<div class="container is-max-desktop">
+
+<h2 class="title is-3">Data Visualization & Format</h2>
+
+<p>
+We provide multi-modal raw sensory data including active vision, passive vision, and neuromorphic vision streams, along with synchronized navigation measurements. Below shows representative visual samples and ROS topic formats.
+</p>
+
+<!-- ===== IMAGE ===== -->
+<div style="margin-top:20px;">
+  <img src="static/data/visualization.png" style="border-radius:8px;">
+  <p class="has-text-centered" style="margin-top:8px; font-size:14px;">
+    Examples of visual raw images in the AquaTriV dataset.
+  </p>
+</div>
+
+<!-- ===== TABLE ===== -->
+<div style="margin-top:30px; overflow-x:auto;">
+
+<table class="table is-striped is-fullwidth is-hoverable">
+
+<thead>
+<tr>
+<th>Type</th>
+<th>Topic Name</th>
+<th>Message Type</th>
+<th>Rate (Hz)</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr><td><b>Active Vision</b></td><td>/scanner/left_image/compressed</td><td>sensor_msgs/CompressedImage</td><td>100</td></tr>
+<tr><td></td><td>/scanner/right_image/compressed</td><td>sensor_msgs/CompressedImage</td><td>100</td></tr>
+
+<tr><td><b>Passive Vision</b></td><td>/stereo/infra1/compressed</td><td>sensor_msgs/CompressedImage</td><td>30</td></tr>
+<tr><td></td><td>/stereo/infra2/compressed</td><td>sensor_msgs/CompressedImage</td><td>30</td></tr>
+<tr><td></td><td>/stereo/monocular/compressed</td><td>sensor_msgs/CompressedImage</td><td>30</td></tr>
+<tr><td></td><td>/stereo/imu</td><td>sensor_msgs/IMU</td><td>200</td></tr>
+
+<tr><td><b>Neuromorphic Vision</b></td><td>/dvs/events</td><td>dvs_msgs/EventArray</td><td>30</td></tr>
+<tr><td></td><td>/dvs/image_raw/compressed</td><td>sensor_msgs/CompressedImage</td><td>30</td></tr>
+<tr><td></td><td>/dvs/event_rendering/compressed</td><td>sensor_msgs/CompressedImage</td><td>30</td></tr>
+<tr><td></td><td>/dvs/imu</td><td>sensor_msgs/IMU</td><td>200</td></tr>
+
+<tr><td><b>AHRS</b></td><td>/imu/data</td><td>sensor_msgs/Imu</td><td>200</td></tr>
+<tr><td></td><td>/imu/mag</td><td>sensor_msgs/MagneticField</td><td>50</td></tr>
+
+<tr><td><b>DVL</b></td><td>/dvl/data</td><td>dvl_a50_2/DVL</td><td>12</td></tr>
+<tr><td></td><td>/dvl/velocity</td><td>sensor_msgs/Imu</td><td>12</td></tr>
+<tr><td></td><td>/dvl/position</td><td>sensor_msgs/Imu</td><td>4</td></tr>
+
+<tr><td><b>Pressure</b></td><td>/pressure_sensor/depth</td><td>sensor_msgs/FluidPressure</td><td>60</td></tr>
+
+<tr><td><b>Bonus</b></td><td>/robotview/monocular</td><td>sensor_msgs/CompressedImage</td><td>30</td></tr>
+<tr><td></td><td>/waterview/monocular</td><td>sensor_msgs/CompressedImage</td><td>30</td></tr>
+
+</tbody>
+</table>
+
+</div>
+
+</div>
+</section>
+
+
+  
 <!-- BENCHMARK -->
 <section class="section">
 <div class="container is-max-desktop">
