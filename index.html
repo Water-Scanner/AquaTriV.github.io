@@ -105,7 +105,8 @@ img { max-width:100%; }
 <i class="fab fa-github"></i>&nbsp; Code
 </a>
 
-<a href="#" class="button is-success is-rounded">
+<!-- Dataset -->
+<a onclick="showNotice()" class="button is-success is-rounded">
 <i class="fas fa-database"></i>&nbsp; Dataset
 </a>
 
@@ -114,6 +115,7 @@ img { max-width:100%; }
 
 <div class="scroll-down">↓</div>
 </section>
+
 
 <!-- TITLE -->
 <section id="main-content" class="section">
@@ -127,32 +129,66 @@ Underwater Multi-Scene Multi-Modal Dataset
 
 <p><b>25 sequences · 255GB · 6.9h · 2.8km</b></p>
 
-<!--Authors -->
-<div>
+<!-- Authors -->
+<div style="margin-top:15px;">
 Yaming Ou, Xiaoyan Liu, Junfeng Fan, Chao Zhou, Pengjv Zhang, Song Xia, Yuanbo Xue, Bing Wang, Long Cheng
 </div>
 
-<!--Logos-->
-<div class="columns is-centered affiliation-logos">
-<div class="column is-narrow"><img src="static/logo/UCAS.jpeg" height="88"></div>
-<div class="column is-narrow"><img src="static/logo/CASIA.jpeg" height="88"></div>
-<div class="column is-narrow"><img src="static/logo/HKU.jpeg" height="88"></div>
-<div class="column is-narrow"><img src="static/logo/PolyU.jpeg" height=“88"></div>
-<div class="column is-narrow"><img src="static/logo/UCL.jpeg" height="88"></div>
+<!-- Logos -->
+<div class="columns is-centered affiliation-logos" style="margin-top:25px;">
+
+<div class="column is-narrow">
+  <img src="static/logo/UCAS.jpeg" height="70">
 </div>
 
-<!--Buttons -->
-<div class="publication-links" style="margin-top:20px;"><a href="https://arxiv.org/pdf/XXXX.pdf" target=" blank"class="button is-dark is-rounded"><i class="fas fa-file-pdf"></i>&nbsp; Paper</a>
-<a href="https://github.com/yourrepo" target=" _blank"class="button is-dark is-rounded">
+<div class="column is-narrow">
+  <img src="static/logo/CASIA.jpeg" height="70">
+</div>
+
+<div class="column is-narrow">
+  <img src="static/logo/HKU.jpeg" height="70">
+</div>
+
+<div class="column is-narrow">
+  <img src="static/logo/PolyU.jpeg" height="70">
+</div>
+
+<div class="column is-narrow">
+  <img src="static/logo/UCL.jpeg" height="70">
+</div>
+
+</div>
+
+<!-- Buttons -->
+<div class="publication-links" style="margin-top:25px;">
+
+<a href="https://arxiv.org/pdf/XXXX.pdf" target="_blank"
+class="button is-dark is-rounded">
+<i class="fas fa-file-pdf"></i>&nbsp; Paper
+</a>
+
+<a href="https://github.com/yourrepo" target="_blank"
+class="button is-dark is-rounded">
 <i class="fab fa-github"></i>&nbsp; Code
 </a>
-<a href="#" target=" blank" class="button is-success is-rounded">
+
+<!-- Dataset 弹窗 -->
+<a onclick="showNotice()" class="button is-success is-rounded">
 <i class="fas fa-database"></i>&nbsp; Dataset (255GB)
 </a>
+
 </div>
 
 </div>
 </section>
+
+
+<!-- SCRIPT -->
+<script>
+function showNotice() {
+  alert("Dataset will be publicly available after paper acceptance.");
+}
+</script>
 
 <!-- OVERVIEW -->
 <section class="section section-dark">
