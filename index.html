@@ -6,147 +6,71 @@
 
 <title>AquaTriV Dataset</title>
 
-<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans" rel="stylesheet">
-
-<!-- Bulma -->
 <link rel="stylesheet" href="static/css/bulma.min.css">
-
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-/* ================= GLOBAL ================= */
-body {
-  font-family: 'Noto Sans', sans-serif;
-  margin: 0;
-}
-
-.section {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.section-dark {
-  background-color: #f5f7fa;
-}
+body { font-family: 'Noto Sans', sans-serif; margin:0; }
+.section { padding:3rem 0; }
+.section-dark { background:#f5f7fa; }
 
 .gradient-text {
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg,#00c6ff,#0072ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+img { max-width:100%; }
 
-/* ================= HERO VIDEO ================= */
-.hero-video {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
+/* HERO */
+.hero-video { position:relative; height:100vh; overflow:hidden; }
 .bg-video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
+  position:absolute; top:50%; left:50%;
+  min-width:100%; min-height:100%;
+  transform:translate(-50%,-50%);
+  object-fit:cover;
 }
-
 .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.45);
+  position:absolute; width:100%; height:100%;
+  background:rgba(0,0,0,0.45);
 }
-
 .hero-content {
-  position: relative;
-  z-index: 2;
-  color: white;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  animation: fadeIn 1.5s ease;
+  position:relative; z-index:2;
+  color:white; text-align:center;
+  top:50%; transform:translateY(-50%);
 }
-
-.hero-content h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
-}
-
-.hero-content h2 {
-  font-size: 1.5rem;
-  margin-top: 10px;
-}
-
-.hero-buttons .button {
-  margin: 5px;
-}
+.hero-content h1 { font-size:3.5rem; font-weight:bold; }
+.hero-buttons .button { margin:5px; }
 
 .scroll-down {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-  color: white;
-  font-size: 26px;
-  animation: bounce 1.5s infinite;
+  position:absolute; bottom:20px;
+  width:100%; text-align:center;
+  font-size:26px; color:white;
+  animation:bounce 1.5s infinite;
 }
-
 @keyframes bounce {
-  0%,100% { transform: translateY(0);}
-  50% { transform: translateY(10px);}
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(10px);}
 }
 
-@keyframes fadeIn {
-  from { opacity:0; transform: translateY(20px);}
-  to { opacity:1; transform: translateY(0);}
-}
-
-/* ================= BUTTON ================= */
-.publication-links .button {
-  margin: 5px;
-  transition: 0.25s;
-}
-.publication-links .button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* ================= LOGO ================= */
-.affiliation-logos {
-  text-align:center;
-  margin-top:20px;
-}
-
+/* LOGO */
 .affiliation-logos img {
-  height: 55px;
-  margin: 0 12px;
-  vertical-align: middle;
-  transition: 0.3s;
+  height:60px; margin:0 10px;
 }
 
-.affiliation-logos img:hover {
-  transform: scale(1.05);
-}
-
-/* ================= CARD ================= */
+/* CARD */
 .card-hover:hover {
-  transform: translateY(-5px);
-  transition: 0.3s;
+  transform:translateY(-5px);
+  transition:0.3s;
 }
 
-.video-container {
-  border-radius: 12px;
-  overflow: hidden;
+/* VIDEO BLOCK */
+.video-block {
+  margin-top:30px;
+  border-radius:12px;
+  overflow:hidden;
 }
 
 </style>
@@ -154,107 +78,71 @@ img {
 
 <body>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 <section class="hero-video">
 
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="static/videos/S1.mp4" type="video/mp4">
-  </video>
+<video autoplay muted loop playsinline class="bg-video">
+  <source src="static/videos/S1.mp4" type="video/mp4">
+</video>
 
-  <div class="overlay"></div>
+<div class="overlay"></div>
 
-  <div class="hero-content">
-    <h1>AquaTriV</h1>
-    <h2>A Multi-Modal Underwater Dataset for Dense SLAM and Neural Reconstruction</h2>
+<div class="hero-content">
+<h1>AquaTriV</h1>
+<h2>Multi-Modal Underwater Dataset for Dense SLAM</h2>
 
-    <div class="hero-buttons">
-      <a href="#main-content" class="button is-light is-rounded">
-        <i class="fas fa-arrow-down"></i>&nbsp; Project
-      </a>
-      <a href="https://arxiv.org/pdf/XXXX.pdf" target="_blank" class="button is-dark is-rounded">
-        <i class="fas fa-file-pdf"></i>&nbsp; Paper
-      </a>
-      <a href="https://github.com/yourrepo" target="_blank" class="button is-dark is-rounded">
-        <i class="fab fa-github"></i>&nbsp; Code
-      </a>
-      <a href="#" target="_blank" class="button is-success is-rounded">
-        <i class="fas fa-database"></i>&nbsp; Dataset
-      </a>
-    </div>
-  </div>
+<div class="hero-buttons">
 
-  <div class="scroll-down">↓</div>
+<a onclick="scrollToContent()" class="button is-light is-rounded">
+<i class="fas fa-arrow-down"></i>&nbsp; Project
+</a>
+
+<a href="#" class="button is-dark is-rounded">
+<i class="fas fa-file-pdf"></i>&nbsp; Paper
+</a>
+
+<a href="#" class="button is-dark is-rounded">
+<i class="fab fa-github"></i>&nbsp; Code
+</a>
+
+<a href="#" class="button is-success is-rounded">
+<i class="fas fa-database"></i>&nbsp; Dataset
+</a>
+
+</div>
+</div>
+
+<div class="scroll-down">↓</div>
 </section>
 
-<!-- ================= TITLE ================= -->
+<!-- TITLE -->
 <section id="main-content" class="section">
-  <div class="container is-max-desktop has-text-centered">
+<div class="container is-max-desktop has-text-centered">
 
 <h1 class="title is-1 gradient-text">AquaTriV</h1>
 
 <h2 class="subtitle is-4">
-AquaTriV: An Underwater Multi-Scene, Multi-Modal Dense SLAM Dataset with Active, Passive, Neuromorphic Vision for Localization and Mapping Evaluation
+Underwater Multi-Scene Multi-Modal Dataset
 </h2>
 
-<p><b>25 sequences · 255GB · 6.9h · 2.8km trajectory</b></p>
+<p><b>25 sequences · 255GB · 6.9h · 2.8km</b></p>
 
-<!-- Authors -->
-<div class="is-size-5">
-Yaming Ou<sup>1,2</sup>, Xiaoyan Liu<sup>1,2</sup>, Junfeng Fan<sup>2</sup>,
-Chao Zhou<sup>2</sup>, Pengjv Zhang<sup>2</sup>, Song Xia<sup>2</sup>,
-Bin Wang<sup>3</sup>, Yuanbo Xue<sup>4</sup>, Long Cheng<sup>1</sup>
+<div>
+Yaming Ou, Xiaoyan Liu, Junfeng Fan, Chao Zhou, Pengjv Zhang
 </div>
 
-<!-- Affiliations -->
-<div class="is-size-6" style="margin-top:10px;">
-<sup>1</sup> UCAS &nbsp;
-<sup>2</sup> CASIA &nbsp;
-<sup>3</sup> PolyU &nbsp;
-<sup>4</sup> UCL
-</div>
-
-<!-- Logos -->
-<div class="columns is-centered affiliation-logos">
-
-  <div class="column is-narrow">
-    <img src="static/logo/UCAS.jpeg" height="88">
-  </div>
-
-  <div class="column is-narrow">
-    <img src="static/logo/CASIA.jpeg" height="88">
-  </div>
-
-  <div class="column is-narrow">
-    <img src="static/logo/HKU.jpeg" height="88">
-  </div>
-
-  <div class="column is-narrow">
-    <img src="static/logo/PolyU.jpeg" height="88">
-  </div>
-
-  <div class="column is-narrow">
-    <img src="static/logo/UCL.jpeg" height="88">
-  </div>
-
-</div>
-
-<!-- Buttons -->
-<div class="publication-links" style="margin-top:20px;">
-  <a href="https://arxiv.org/pdf/XXXX.pdf" target="_blank" class="button is-dark is-rounded">
-    <i class="fas fa-file-pdf"></i>&nbsp; Paper
-  </a>
-  <a href="https://github.com/yourrepo" target="_blank" class="button is-dark is-rounded">
-    <i class="fab fa-github"></i>&nbsp; Code
-  </a>
-  <a href="#" target="_blank" class="button is-success is-rounded">
-    <i class="fas fa-database"></i>&nbsp; Dataset (255GB)
-  </a>
+<div class="affiliation-logos" style="margin-top:20px;">
+<img src="static/logo/UCAS.jpeg">
+<img src="static/logo/CASIA.jpeg">
+<img src="static/logo/HKU.jpeg">
+<img src="static/logo/PolyU.jpeg">
+<img src="static/logo/UCL.jpeg">
 </div>
 
 </div>
 </section>
 
-<!-- ================= OVERVIEW ================= -->
+<!-- OVERVIEW -->
 <section class="section section-dark">
 <div class="container is-max-desktop">
 
@@ -263,31 +151,61 @@ Bin Wang<sup>3</sup>, Yuanbo Xue<sup>4</sup>, Long Cheng<sup>1</sup>
 <div class="columns">
 <div class="column">
 <div class="box card-hover">
-<h4 class="title is-5">Multi-Modal Sensing</h4>
-<p>Passive, active, neuromorphic vision + IMU, DVL, pressure</p>
+<h4 class="title is-5">Multi-Modal</h4>
+<p>Active + Passive + Neuromorphic</p>
 </div>
 </div>
 
 <div class="column">
 <div class="box card-hover">
-<h4 class="title is-5">Dense Ground Truth</h4>
-<p>Laser-scanned dense point clouds for mapping evaluation</p>
+<h4 class="title is-5">Dense GT</h4>
+<p>Laser-scanned maps</p>
 </div>
 </div>
 
 <div class="column">
 <div class="box card-hover">
-<h4 class="title is-5">Accurate Localization</h4>
-<p>MCS (indoor) + INS-SfM fusion (outdoor)</p>
+<h4 class="title is-5">Accurate</h4>
+<p>MCS + INS-SfM</p>
 </div>
 </div>
+</div>
+
+<!-- NEW VIDEO -->
+<div class="video-block">
+<video autoplay muted loop controls width="100%">
+<source src="static/videos/overview.mp4" type="video/mp4">
+</video>
 </div>
 
 </div>
 </section>
 
-<!-- ================= SCENES ================= -->
+<!-- ROBOT -->
 <section class="section">
+<div class="container is-max-desktop">
+
+<h2 class="title is-3">Robotic Platform</h2>
+
+<div class="columns is-vcentered">
+
+<div class="column is-6">
+<img src="static/images/robot.jpg">
+</div>
+
+<div class="column is-6">
+<p>
+Custom-designed underwater robotic platform equipped with multi-modal sensors including cameras, DVL, IMU, and pressure sensors.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- SCENES -->
+<section class="section section-dark">
 <div class="container is-max-desktop">
 
 <h2 class="title is-3">Scenes & Downloads</h2>
@@ -298,8 +216,7 @@ Bin Wang<sup>3</sup>, Yuanbo Xue<sup>4</sup>, Long Cheng<sup>1</sup>
 <div class="card card-hover">
 <img src="static/scene/pool11.jpg">
 <div class="card-content">
-<b>Pool</b><br>~100GB<br>
-<a class="button is-link is-light">Download</a>
+Pool<br>~100GB
 </div>
 </div>
 </div>
@@ -308,8 +225,7 @@ Bin Wang<sup>3</sup>, Yuanbo Xue<sup>4</sup>, Long Cheng<sup>1</sup>
 <div class="card card-hover">
 <img src="static/scene/cave11.jpg">
 <div class="card-content">
-<b>Cave</b><br>~50GB<br>
-<a class="button is-link is-light">Download</a>
+Cave<br>~50GB
 </div>
 </div>
 </div>
@@ -318,8 +234,7 @@ Bin Wang<sup>3</sup>, Yuanbo Xue<sup>4</sup>, Long Cheng<sup>1</sup>
 <div class="card card-hover">
 <img src="static/scene/river11.jpg">
 <div class="card-content">
-<b>River</b><br>~60GB<br>
-<a class="button is-link is-light">Download</a>
+River<br>~60GB
 </div>
 </div>
 </div>
@@ -328,8 +243,7 @@ Bin Wang<sup>3</sup>, Yuanbo Xue<sup>4</sup>, Long Cheng<sup>1</sup>
 <div class="card card-hover">
 <img src="static/scene/sea11.jpg">
 <div class="card-content">
-<b>Sea</b><br>~45GB<br>
-<a class="button is-link is-light">Download</a>
+Sea<br>~45GB
 </div>
 </div>
 </div>
@@ -339,63 +253,32 @@ Bin Wang<sup>3</sup>, Yuanbo Xue<sup>4</sup>, Long Cheng<sup>1</sup>
 </div>
 </section>
 
-<!-- ================= BENCHMARK ================= -->
-<section class="section section-dark">
+<!-- BENCHMARK -->
+<section class="section">
 <div class="container is-max-desktop">
 
 <h2 class="title is-3">Benchmark</h2>
 
 <img src="static/images/benchmark.png">
 
-<p>
-Evaluation across SOTA SLAM systems under challenging underwater conditions.
-</p>
-
 </div>
 </section>
 
-<!-- ================= VISUAL ================= -->
-<section class="section">
-<div class="container is-max-desktop">
-
-<h2 class="title is-3">Visualization</h2>
-
-<div class="columns">
-<div class="column">
-<img src="static/images/gt_map.png">
-</div>
-<div class="column">
-<img src="static/images/trajectory.png">
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- ================= BIBTEX ================= -->
-<section class="section section-dark">
-<div class="container is-max-desktop">
-
-<h2 class="title is-3">BibTeX</h2>
-
-<pre>
-@article{aquatriv2025,
-title={AquaTriV Dataset},
-author={Ou et al.},
-journal={IJRR},
-year={2025}
-}
-</pre>
-
-</div>
-</section>
-
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer class="footer">
 <div class="content has-text-centered">
 <p>AquaTriV Dataset © 2025</p>
 </div>
 </footer>
+
+<!-- JS FIX -->
+<script>
+function scrollToContent() {
+  document.getElementById("main-content").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+</script>
 
 </body>
 </html>
