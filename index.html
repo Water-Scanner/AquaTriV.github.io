@@ -328,7 +328,7 @@ Water-Scanner: Custom-designed underwater robotic platform equipped with multi-m
 </section>
 
 
-<!-- SCENES -->
+<!-- SCENES  & DOWNLOADS-->
 <section class="section section-dark">
 <div class="container is-max-desktop">
 
@@ -336,43 +336,81 @@ Water-Scanner: Custom-designed underwater robotic platform equipped with multi-m
 
 <div class="columns is-multiline">
 
+<!-- Pool -->
 <div class="column is-3">
 <div class="card card-hover">
 <img src="static/scene/pool11.jpg">
-<div class="card-content">
-Pool<br>~100GB
+<div class="card-content" style="display:flex; justify-content:space-between; align-items:center;">
+  <div>
+    <b>Pool</b><br>
+    <span style="font-size:13px;">~100GB</span>
+  </div>
+  <button class="button is-link is-light is-small" onclick="showNotice()">
+    Download
+  </button>
 </div>
 </div>
 </div>
 
+<!-- Cave -->
 <div class="column is-3">
 <div class="card card-hover">
 <img src="static/scene/cave11.jpg">
-<div class="card-content">
-Cave<br>~50GB
+<div class="card-content" style="display:flex; justify-content:space-between; align-items:center;">
+  <div>
+    <b>Cave</b><br>
+    <span style="font-size:13px;">~50GB</span>
+  </div>
+  <button class="button is-link is-light is-small" onclick="showNotice()">
+    Download
+  </button>
 </div>
 </div>
 </div>
 
+<!-- River -->
 <div class="column is-3">
 <div class="card card-hover">
 <img src="static/scene/river11.jpg">
-<div class="card-content">
-River<br>~60GB
+<div class="card-content" style="display:flex; justify-content:space-between; align-items:center;">
+  <div>
+    <b>River</b><br>
+    <span style="font-size:13px;">~60GB</span>
+  </div>
+  <button class="button is-link is-light is-small" onclick="showNotice()">
+    Download
+  </button>
 </div>
 </div>
 </div>
 
+<!-- Sea -->
 <div class="column is-3">
 <div class="card card-hover">
 <img src="static/scene/sea11.jpg">
-<div class="card-content">
-Sea<br>~45GB
+<div class="card-content" style="display:flex; justify-content:space-between; align-items:center;">
+  <div>
+    <b>Sea</b><br>
+    <span style="font-size:13px;">~45GB</span>
+  </div>
+  <button class="button is-link is-light is-small" onclick="showNotice()">
+    Download
+  </button>
 </div>
 </div>
 </div>
 
 </div>
+
+</div>
+</section>
+
+<!-- NOTICE SCRIPT -->
+<script>
+function showNotice() {
+  alert("Dataset will be publicly available after paper acceptance.");
+}
+</script>
 
 
 <!-- ===== Table data details ===== -->
