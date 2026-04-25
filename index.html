@@ -499,17 +499,14 @@ We compare representative dense mapping and neural reconstruction baselines, inc
 covering both geometric and learning-based approaches.
 </p>
 
-<div style="margin-top:20px;">
-  <img src="static/evaluation/map_plot.png" style="border-radius:8px;">
-  <p class="has-text-centered" style="margin-top:8px; font-size:14px;">
-    Mapping evaluation results for selected CaveM#07 and RiverM#05 in the AquaTriV dataset.
-  </p>
+<div class="has-text-centered" style="margin-top:20px;">
+<img src="static/evaluation/map_plot.png" style="max-width:100%;">
 </div>
 
 <div style="margin-top:20px;">
   <img src="static/evaluation/map_table.png" style="border-radius:8px;">
   <p class="has-text-centered" style="margin-top:8px; font-size:14px;">
-    Benchmark dense mapping evaluation results for 2 sequences in the AquaTriV dataset.
+    Four baseline method dense mapping evaluation results in the AquaTriV dataset.
   </p>
 </div>
 
@@ -523,23 +520,21 @@ Chamfer distance (CD), and mesh metric error (MME).
 <h3 class="title is-4" style="margin-top:40px;">Neural Reconstruction</h3>
 
 <p>
-We further evaluate neural rendering quality using modern radiance field methods 
-(e.g., Gaussian Splatting / NeRF variants), demonstrating robustness under turbidity, 
-low visibility, and dynamic lighting conditions.
+Recent neural rendering approaches, particularly 3D Gaussian Splatting (3DGS), require stable and sufficiently dense geometric priors, which are often lacking in underwater datasets relying on sparse SfM-based reconstructions. By deploying SeaSplat on AquaTriV and leveraging dense laser-scanned point clouds for initialization, we achieve stable optimization and high-fidelity photo-realistic reconstruction across diverse underwater scenes.
 </p>
 
 <!-- Main Image -->
 <div class="has-text-centered" style="margin-top:20px;">
-<img src="static/images/nerf_result.png" style="max-width:90%;">
+<img src="static/evaluation/gs1.png" style="max-width:90%;">
 </div>
 
 <!-- GIFs -->
 <div class="columns" style="margin-top:20px;">
 <div class="column">
-<img src="static/gif/recon1.gif">
+<img src="static/gif/cave.gih">
 </div>
 <div class="column">
-<img src="static/gif/recon2.gif">
+<img src="static/gif/river.gif">
 </div>
 </div>
 
